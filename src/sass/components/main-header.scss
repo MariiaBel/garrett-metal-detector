@@ -68,7 +68,7 @@
         width: 100%;
         border-radius: 100px;
         background-color: map-get($colors, "accent");
-        background-image: linear-gradient(to bottom,  map-get($colors, "accent"), #FFF200 2%, map-get($colors, "accent"));
+        background-image: linear-gradient(to bottom,  map-get($colors, "accent"), map-get($colors, "accent-light") 2%, map-get($colors, "accent"));
         box-shadow: 0 5px map-get($colors, "accent-dark");
         &-pic img{
             height: 1.26rem;
