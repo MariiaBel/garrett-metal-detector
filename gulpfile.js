@@ -64,7 +64,7 @@ const html = gulp.series(
     function() {
         return gulp.src('src/*.pug')
             // .pipe(dataG(file => JSON.parse(fs.readFileSync('build/data/data.json'))))
-            .pipe(pug({pretty: false}))
+            .pipe(pug({pretty: '  '}))
             .pipe(gulp.dest('build/'))
             .pipe(browserSync.stream());
     }

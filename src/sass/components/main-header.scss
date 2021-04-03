@@ -87,6 +87,7 @@
         
     }
     &__price {
+        vertical-align: text-bottom;
         &-old {
             color: map-get($colors, "grey-text");
             position: relative;
