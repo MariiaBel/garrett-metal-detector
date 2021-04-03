@@ -1,4 +1,4 @@
-# Проект: Garrett-metal-detector
+# Проект: Garrett Metal Detector
 
 * Заказчик: "" 
 * Исполнитель: [Мария Белогубова](https://wwwpage.ru).
