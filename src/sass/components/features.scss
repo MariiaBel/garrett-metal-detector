@@ -13,6 +13,9 @@
     text-align: center;
     &__item {
         flex-grow: 1;
+        font-family: $font-subtitle;
+        font-weight: 400;
+        text-transform: uppercase;
         &-icon {
             height: 35px;
             width: 60px;
