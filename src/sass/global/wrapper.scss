@@ -1,0 +1,22 @@
+.wrapper {
+    padding-left: map-get($padding, "lg" );
+    padding-right: map-get($padding, "lg" );
+    margin: 0 auto;
+    max-width: map-get($breakpoints, "lg");
+    min-width: map-get($breakpoints, "min");
+    box-sizing: border-box;
+}
+
+@include media-to("md") {
+    .wrapper {
+        padding-left: map-get($padding, "md" );
+        padding-right: map-get($padding, "md" );
+    }
+}
+
+@include media-to("sm") {
+    .wrapper {
+        padding-left: map-get($padding, "sm" );
+        padding-right: map-get($padding, "sm" );
+    }
+}

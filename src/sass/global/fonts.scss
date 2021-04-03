@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face {
+    font-family: "Bebas Neue Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local("Bebas Neue Pro"),
+         url("../fonts/BebasNeuePro-Regular.woff2") format("woff2"),
+         url("../fonts/BebasNeuePro-Regular.woff") format("woff");
+}
+@font-face {
+    font-family: "Bebas Neue Pro";
+    font-style: bold;
+    font-weight: 700;
+    font-display: swap;
+    src: local("Bebas Neue Pro"),
+         url("../fonts/BebasNeuePro-Bold.woff2") format("woff2"),
+         url("../fonts/BebasNeuePro-Bold.woff") format("woff");
+}
+
+html {
+    font-size: map-get($rootSize, "lg" );
+    color: map-get($colors, "dark");
+}
+
+.h1 {
+    font-family: $font-title;
+    font-weight: 400;
+    font-size: 4.7rem;  
+    text-transform: uppercase;
+}
+.h2 {
+    font-family: $font-subtitle;
+    font-size: 2.9rem;
+    font-weight: 400;  
+    text-transform: uppercase;
+}
+.h3 {
+    font-family: $font-subtitle;
+    font-size: 2.1rem;
+    font-weight: 400; 
+    text-transform: uppercase;
+}
+.h4 {
+    font-family: $font-subtitle;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.text-accent {
+    font-size: 1.3rem;
+    font-family: $font-subtitle;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.text-accent-color {
+    color: map-get($colors, "accent");
+}
+p {
+    font-size: 1rem;
+}
+
+
+@include media-to("md") {
+    html {
+        font-size: map-get($rootSize, "md" );
+    }
+}
+
+@include media-to("sm") {
+    
+    html {
+        font-size: map-get($rootSize, "sm" );
+    }
+}

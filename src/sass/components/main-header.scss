@@ -1,0 +1,112 @@
+.main-header {
+    box-sizing: border-box;
+    text-align: center;
+    background-color: map-get($colors, "grey-bg");
+    background-image:     
+        linear-gradient(to bottom,  map-get($colors, "light"), rgba(239, 239, 239, 0.5)),
+        url('../img/forest.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 100px;
+
+    &:before {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 100px);
+        width: 430px;
+        height: 430px;
+        border: 70px solid map-get($colors, "accent");
+        border-radius: 100%;
+    }
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .h1, .h2, .h3, .h4 {
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 0.9;
+    }
+
+    &__top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    &__offer {
+        padding-top: 70px;
+        padding-bottom: 50px;
+        position: relative;
+        z-index: 1;
+        &-pic {    
+            display: block;
+            padding-right: 40px;
+            padding-left: 40px;
+            padding-top: 15px;
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+    &__btn {
+        display: inline-block;
+        box-sizing: border-box;
+        margin-top: 10px;
+        padding:20px;
+        max-width: 275px;
+        width: 100%;
+        border-radius: 100px;
+        background-color: map-get($colors, "accent");
+        background-image: linear-gradient(to bottom,  map-get($colors, "accent"), #FFF200 2%, map-get($colors, "accent"));
+        box-shadow: 0 5px map-get($colors, "accent-dark");
+        &-pic img{
+            height: 1.26rem;
+            width: 90px;
+            object-fit: contain;
+            object-position: right;    
+            position: relative;
+            top: 3px;
+        }    
+        
+    }
+    &__price {
+        &-old {
+            color: map-get($colors, "grey-text");
+            position: relative;
+            &:after {
+                position: absolute;
+                content: "";
+                border-bottom: 2px solid map-get($colors, "dark"); 
+                height: 1px;
+                width: 100%;
+                left: 0;
+                top: calc(50% - 2px);
+                transform: rotate(-25deg);
+            }
+        }
+    }
+}
+
+
+@include media-to("md") {
+    .main-header {
+
+    }
+}
+
+@include media-to("sm") {
+    .main-header {
+
+    }
+}

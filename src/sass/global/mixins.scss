@@ -1,0 +1,44 @@
+//TODO:
+//need to decompose it
+
+// generating media query:  @media (min-width: $breakpoint)
+@mixin media-to($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (max-width: #{map-get($breakpoints, $breakpoint)}) {
+            @content;
+        }
+    }
+
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Please make sure it is defined in `$breakpoints` map.";
+    }
+}
+
+
+@mixin resolution() {
+    @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+        @content;
+    }
+}
+
+
+@mixin bg-img($name, $repeat:no-repeat, $bg-size:cover, $extention:"png", $media-sizes...) {
+    background-image: url("../img/#{$name}-sm.#{$extention}");    
+    background-repeat:  $repeat;
+    background-size: $bg-size;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+        background-image: url("../img/#{$name}-sm@2x.#{$extention}");     
+    }
+
+    @each $size in $media-sizes {
+        @include media-to("#{$size}") {
+            background-image: url("../img/#{$name}-#{$size}.#{$extention}");   
+
+            @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+                background-image: url("../img/#{$name}-#{$size}@2x.#{$extention}");
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+mixin form(namePlaceholder, phonePlaceholder, agreeText, btnText) 
+    form.form.wv_order-form(method="POST" action="order.php" class!=attributes.class)
+        .form__input   
+            input.wv_name(type="text" placeholder=`${namePlaceholder}` name="name" required)                                
+            +picture-svg-sprite('person')(class="form__input-icon icon icon--person")  
+
+        .form__input                              
+            input.wv_phone(type="phone" placeholder=`${phonePlaceholder}` name="tel" required)
+            +picture-svg-sprite('phone')(class="form__input-icon icon icon--phone")
+        
+        label.form__checkbox
+            input(type="checkbox" name="agree")
+            span.form__checkbox-mark(tabindex="1")
+            span !{PAGE.agree}
+
+        input(name='ym' type='hidden' value='default')
+        input(name='utm_source' type='hidden')
+        input(name='utm_medium' type='hidden')
+        input(name='utm_campaign' type='hidden')
+        input(name='utm_content' type='hidden')
+        input(name='utm_term' type='hidden')
+        input(name='referer' type='hidden' value='default')
+        input(name='guid' type='hidden')
+        input(name='first_guid' type='hidden')
+        input(name='landing_id' type='hidden')
+        input(name='prelanding_id' type='hidden')
+        input(name='offer_id' type='hidden')
+        input(name='url' type='hidden')
+        input(name='cookie_enabled' type='hidden')
+
+        button.btn.form__btn(type="submit")= btnText

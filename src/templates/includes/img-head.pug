@@ -1,0 +1,24 @@
+svg.svg-animate(width='550' height='750' viewBox='0 0 550 733' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink')
+    image#image0(width='550' height='733' xlink:href='img/head.png')
+    defs
+        g#point
+            circle#point-circule1(r="6" fill='#FFE99B' fill-opacity='0.1')
+            circle#point-circule2(r="6" fill='#FFE99B' fill-opacity='0.1')
+            circle#point-circule3(r="6" fill='#FFE99B' fill-opacity='0.1')
+            circle#point-circule4(r="6"  fill='#FFE99B' fill-opacity='0.5')
+
+    use(xlink:href='#point' class="svg-animate__point" transform='translate(510 140)' data-modal-open="text-head-1")
+    use(xlink:href='#point' class="svg-animate__point"  transform='translate(390 30)' data-modal-open="text-head-2")
+    use(xlink:href='#point' class="svg-animate__point"  transform='translate(160 15)' data-modal-open="text-head-3")
+    use(xlink:href='#point' class="svg-animate__point"  transform='translate(40 240)' data-modal-open="text-head-4")
+    use(xlink:href='#point' class="svg-animate__point" transform='translate(90 390)' data-modal-open="text-head-5")
+
+    animate(xlink:href="#point-circule1" attributeName="r" by="12" dur="3s" repeatCount="indefinite" fill="remove")
+    animate(xlink:href="#point-circule2" attributeName="r" by="12" dur="3s" repeatCount="indefinite" begin="1s" fill="remove")
+    animate(xlink:href="#point-circule3" attributeName="r" by="12" dur="3s" repeatCount="indefinite" begin="2s" fill="remove")
+
+each val, key in PAGE.modalTextHeader
+    .modal.modal--text(id=`modal-text-head-${key}`)
+        .modal__content 
+            p= val.text
+            .modal__close(data-modal-close)(tabindex=1)

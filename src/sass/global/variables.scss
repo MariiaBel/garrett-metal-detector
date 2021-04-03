@@ -1,0 +1,39 @@
+@use "sass:map";
+
+// Colors
+$colors: (
+    dark:             #3B3B3B,
+    accent:           #FBBD50,
+    accent-dark:      #DE9816,
+    grey-text:        #A5A3A3,
+    grey-bg:          #EFEFEF,
+    light:            #ffffff,
+);
+
+
+
+// Typograthy
+$font-title: "Bebas Neue", "Arial", sans-serif;
+$font-subtitle: "Bebas Neue Pro", "Arial", sans-serif;
+
+
+// Breakpoints
+$breakpoints: (
+    min: 340px,
+    sm: 500px,
+    md: 768px,
+    lg: 960px,
+);
+
+
+$padding: (
+    sm: 24px,
+    md: 24px,
+    lg: 40px,
+);
+
+$rootSize: (
+    sm: 16px,
+    md: 18px,
+    lg: 18px,
+);

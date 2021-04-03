@@ -1,0 +1,6 @@
+mixin picture-svg(name, width, height, alt) 
+    picture.picture(class!=attributes.class)
+        img(src=`img/${name}.svg`
+            width=width 
+            height=height 
+            alt=alt)

@@ -1,0 +1,19 @@
+mixin picture(name, extension, width, height, alt, sizeMedia = ["lg","md"]) 
+    picture.picture(class!=attributes.class)
+        each val in sizeMedia
+            source(type=`image/webp` 
+                media=`(min-width: ${BRAIKPOINTS[val]})`
+                srcset=`img/${name}-${val}.webp 1x, img/${name}-${val}@2x.webp 2x`)
+
+        source(type=`image/webp` 
+            srcset=`img/${name}-sm.webp 1x, img/${name}-sm@2x.webp 2x`)
+
+        
+        each val in sizeMedia
+            source(
+                media=`(min-width: ${BRAIKPOINTS[val]})`
+                srcset=`img/${name}-${val}.${extension} 1x, img/${name}-${val}@2x.${extension} 2x`)
+        
+        img(src=`img/${name}-sm.${extension}` 
+            srcset=`img/${name}-sm@2x.${extension} 2x` width=width height=height 
+            alt=alt)

@@ -1,0 +1,67 @@
+.ability {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    .h1, .h2, .h3, .h4 {
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 1.1;
+    }
+    ul {
+        padding-left: 0;
+        margin:0;
+        list-style: none;
+    }
+    p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    &__header {
+        position: relative;
+        padding-left: 60px;
+        padding-bottom: 15px;
+        &:before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0.4em;
+            width: 50px;
+            height: 2px;
+            background-color: map-get($colors, "dark");
+        }
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 15px;
+        text-align: center;
+        & li {
+            padding:15px;
+            box-shadow: 0 5px 22px map-get($colors, "grey-bg");
+            font-family: $font-subtitle;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+        &-icon {
+            padding-bottom: 10px;
+            display: block;
+        }
+    }
+}
+
+
+@include media-to("md") {
+    .ability {
+        &__list {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+@include media-to("sm") {
+    .ability {
+        &__list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}

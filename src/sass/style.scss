@@ -1,0 +1,17 @@
+// Global
+
+@import "global/mixins.scss"; 
+@import "global/variables.scss";
+@import "global/reset.scss"; 
+@import "global/fonts.scss"; 
+@import "global/wrapper.scss";
+
+// Blocks or Components
+//main
+
+
+//specific
+@import "components/main-header.scss";
+@import "components/features.scss";
+@import "components/ability.scss";
+

@@ -1,0 +1,46 @@
+.features {
+    padding-bottom: 40px;
+    padding-top: 40px;
+    background-color: map-get($colors, "light");
+    margin-top: -100px;
+    position: relative;
+    box-shadow: 0 5px 22px map-get($colors, "grey-bg");
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+    text-align: center;
+    &__item {
+        flex-grow: 1;
+        &-icon {
+            height: 35px;
+            width: 60px;
+            padding-bottom: 15px;
+        }
+    }
+    & p {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+}
+
+
+@include media-to("md") {
+    .features {
+        grid-template-columns: repeat(3, 1fr);
+
+
+    }
+}
+
+@include media-to("sm") {
+    .features {
+        display: block;
+        &__item {
+            padding-bottom: 20px;
+        }
+
+    }
+}

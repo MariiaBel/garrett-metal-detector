@@ -1,0 +1,89 @@
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+        meta(http-equiv='X-UA-Compatible' content='ie=edge')
+        meta(name='robots' content='all')
+        meta(name='revisit-after' content='5 days')
+        meta(name='distribution' content='global')
+        meta(name='description' content='')
+        meta(name='keywords' content='')
+        title   
+        
+        link(href='css/style.min.css' rel='stylesheet')
+
+    body
+        header.main-header
+            .wrapper
+                .main-header__top
+                    picture.main-header__logo 
+                        img(src="img/garrett-metal-detector-logo.png" width=170 height=60 alt="лого компании Garrett Metal Detector")
+                    a(href="tel:88001008993").text-accent 8 (800) 100-89-93
+                .main-header__offer
+                    header.header
+                        h2.h2 Купить металлоискатель
+                        h1.h1 GARRETT ACE 250 RUS 
+                        h3.h3 У официального дилера в Санкт-Петербурге
+                    picture.main-header__offer-pic
+                        img(src="img/garret-metal-detector-product.png" width=805 height=150 alt="металлоискатель GARRETT ACE 250 RUS")
+                    a.main-header__btn.text-accent(href="")
+                        picture.main-header__btn-pic
+                            img(src="img/buy-btn.png" width=123 height=33)
+                        span.main-header__price
+                            span.main-header__price-old 18500 
+                            span.main-header__price-new 15300
+        .wrapper
+            section.features
+                .features__item  
+                    svg.features__item-icon
+                        use(xlink:href = 'img/sprite.svg#russia-map')
+                    p Полностью русифицированная версия 
+                .features__item
+                    svg.features__item-icon
+                        use(xlink:href = 'img/sprite.svg#wallet')
+                    p Оплата после проверки при получении 
+                .features__item
+                    svg.features__item-icon
+                        use(xlink:href = 'img/sprite.svg#lamp')
+                    p Налобный фонарь в подарок
+                .features__item
+                    svg.features__item-icon
+                        use(xlink:href = 'img/sprite.svg#medal-g')
+                    p Фирменная гарантия и 2 гарантийных талона 
+                .features__item
+                    svg.features__item-icon
+                        use(xlink:href = 'img/sprite.svg#shield')
+                    p Официальный диллер 
+        section.wrapper.ability
+            header.header.ability__header
+                h2.h3 Что можно найти
+                h3.h4 с помощью <span class="text-accent-color">GARRET ACE 250</span>
+            ul.ability__list
+                li 
+                    picture.ability__list-icon
+                        img(src = 'img/coins.png' width=45 height=45 )
+                    p Монеты
+                li 
+                    picture.ability__list-icon
+                        img(src = 'img/juv.png' width=45 height=45)
+                    p Ювелирные украшения
+                li 
+                    picture.ability__list-icon
+                        img(src = 'img/bullets.png' width=45 height=45)
+                    p Военные артефакты
+                li 
+                    picture.ability__list-icon
+                        img(src = 'img/tra.png' width=45 height=45)
+                    p Сокровища и клады
+                li 
+                    picture.ability__list-icon
+                        img(src = 'img/medal.png' width=45 height=45)
+                    p Ордена, жетоны, медали, значки
+                li 
+                    picture.ability__list-icon
+                        img(src = 'img/cross.png' width=45 height=45)
+                    p Иконы, <br>кресты
+
+
+

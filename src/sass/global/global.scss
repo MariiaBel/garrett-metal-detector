@@ -1,0 +1,142 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    min-width: map-get($breakpoints, "sm");
+    position: relative;
+    scroll-behavior: smooth;
+    scrollbar-color: map-get($colors, "light-additional") map-get($colors, "grey-general");
+    scrollbar-width: thin;
+    // user-select: none; //??ask
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    color: inherit;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.picture {
+    display: block;
+    overflow: hidden;
+    & img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+} 
+.header {
+    margin-bottom: 20px;
+}
+.nowrap-text {
+    white-space: nowrap;
+}
+.bg-black {    
+    background-color: map-get($colors, "dark" );
+    color: map-get($colors, "light" );
+}
+
+.text-accent {
+    color: map-get($colors, "accent-dark" );
+}
+.text-accent-ligth {
+    color: map-get($colors, "accent" );
+}
+
+.text-light {
+    color: map-get($colors, "light" );
+}
+.text-del {
+    color: map-get($colors, "grey-general" );
+    text-decoration-line: line-through;
+}
+
+.order-1 {
+    order: 1;
+}
+
+[data-modal-open] {
+    cursor: pointer;
+}
+// for anchor links
+:target:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    height: 180px;
+    margin: -180px 0 0;
+}
+
+/* полоса прокрутки (скроллбар) */
+::-webkit-scrollbar {
+    width: 5px; /* ширина для вертикального скролла */
+    height: 5px; /* высота для горизонтального скролла */
+    background-color: map-get($colors, "light");
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+    background-color: map-get($colors, "light");
+    border-radius: 9em;
+    box-shadow: inset 1px 1px 10px #f3faf7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color:map-get($colors, "light-additional");
+}
+
+/* Стрелки */
+
+::-webkit-scrollbar-button:vertical:start:decrement {
+    background: none;
+}
+
+::-webkit-scrollbar-button:vertical:end:increment {
+    background: none;
+}
+
+::-webkit-scrollbar-button:horizontal:start:decrement {
+    background: none;
+}
+
+::-webkit-scrollbar-button:horizontal:end:increment {
+    background:none;
+}
+
+@include media-to("md") {
+}
+
+@include media-to("lg") {
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 9px;
+    }
+}
+
+@include media-to("xlg") {
+    ::-webkit-scrollbar {
+        width: 12px;
+        height: 12px; 
+    }
+}
